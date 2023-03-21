@@ -33,7 +33,7 @@ listFolderNames().each { folderName ->
 
 def listFolderNames() {
     def list = []
-    new File(pwd()).eachFile { file ->
+    new File(System.getProperty("user.dir")).eachFile { file ->
         if (file.isDirectory()) {
             list.add(file.getName())
         }
